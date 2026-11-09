@@ -36,6 +36,21 @@ Se irán añadiendo capítulos.
 3. Abre una terminal dentro de la carpeta del capítulo y sigue su `README.md`. Empieza por su apartado **Lo que necesitas antes**: ahí está todo lo que hace falta (cuentas, claves, programas) y en qué capítulo se enseña a sacarlo.
 4. Tus claves van en un archivo `.env` que creas tú copiando `.env.ejemplo`. **Ese archivo no se comparte nunca.**
 
+## Usa tu plan de Claude en tus programas
+
+Algunos capítulos (por ejemplo el [25](curso-de-claude/25-la-ultima-hora-de-bitcoin/)) llevan programas que le preguntan a Claude. Tienes dos maneras:
+
+- **A) Clave de API de la Consola** ([platform.claude.com](https://platform.claude.com/settings/keys)): se paga por uso, con saldo que recargas tú. Cómo se paga y dónde se ve el gasto: [ayuda oficial](https://support.claude.com/en/articles/8977456-how-do-i-pay-for-my-claude-api-usage).
+- **B) Tu plan mensual (Pro o Max)**, sin saldo aparte: gasta de los límites de tu plan ([ayuda oficial](https://support.claude.com/en/articles/15036540)).
+  1. Instala Claude Code ([guía oficial](https://code.claude.com/docs/en/setup)).
+  2. En una terminal, escribe `claude setup-token`. Se abre el navegador, aceptas y te da un token que dura un año. No se guarda solo: cópialo ([documentación](https://code.claude.com/docs/en/authentication#generate-a-long-lived-token)).
+  3. Guárdalo en el `.env` del capítulo como `CLAUDE_CODE_OAUTH_TOKEN`. **No lo compartas nunca.**
+  4. El programa llama a `claude -p "tu pregunta"` ([documentación](https://code.claude.com/docs/en/headless)).
+
+  Ojo: si tienes puesta una `ANTHROPIC_API_KEY` en el ordenador, Claude Code la usa antes que el plan.
+
+Desde el 7 de octubre de 2026, los planes **Max, Ultra y Team** (no Pro) traen **créditos de API cada mes** si enlazas una organización de la Consola desde *Settings → Billing* en claude.ai. Se gastan con una clave de API de esa organización, no se acumulan de un mes a otro y se usan antes que el saldo comprado ([ayuda oficial](https://support.claude.com/en/articles/17154008)).
+
 ## Aviso
 
 - Nunca pegues contraseñas, claves ni palabras de recuperación en ningún chat, tampoco en el de Claude.
