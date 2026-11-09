@@ -1,0 +1,30 @@
+# Claves y configuración personal: NUNCA al repo
+.env
+*.pem
+*.key
+*.session
+*.session-journal
+
+# Tus datos (movimientos, sesiones, bases de datos)
+datos/
+*.db
+*.sqlite
+*.sqlite3
+*.duckdb
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Node
+node_modules/
+
+# Sistema y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
