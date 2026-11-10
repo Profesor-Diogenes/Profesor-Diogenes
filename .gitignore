@@ -3,6 +3,9 @@
 *.env
 *.pem
 *.key
+# Credenciales de Google (OAuth) y su permiso guardado
+client_secret*.json
+token.json
 *.session
 *.session-journal
 
