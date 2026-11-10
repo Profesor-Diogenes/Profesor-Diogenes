@@ -56,6 +56,7 @@ Desde el 7 de octubre de 2026, los planes **Max, Ultra y Team** (no Pro) traen *
 - Nunca pegues contraseñas, claves ni palabras de recuperación en ningún chat, tampoco en el de Claude.
 - Lo que haga Claude, compruébalo. Se equivoca, y cuando se equivoca lo dice muy seguro.
 - Nadie paga por estos vídeos ni por este repositorio.
+- Los capítulos de cripto y de Polymarket van **todo en papel, sin dinero real**: solo leen datos públicos y no ponen órdenes.
 - **Esto no es consejo financiero y aquí no se señala a nadie.** No se recomienda ninguna moneda, acción, plataforma ni momento para comprar o vender.
 
 ## Licencia
