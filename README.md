@@ -25,6 +25,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 6 | [Conecta tu Gmail](curso-de-claude/06-conecta-tu-gmail/) | — |
 | 7 | [Tu calendario y tu Google Drive](curso-de-claude/07-calendario-y-google-drive/) | — |
 | 8 | [Cualquier aplicación del catálogo](curso-de-claude/08-catalogo-de-conectores/) | — |
+| 9 | [Conectores personalizados](curso-de-claude/09-conectores-personalizados/) | — |
 
 ### Claude en tu día a día
 
