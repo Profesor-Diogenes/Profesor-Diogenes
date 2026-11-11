@@ -22,6 +22,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 3 | [Cómo pedirle las cosas para que acierte a la primera](curso-de-claude/03-como-pedirle-las-cosas/) | — |
 | 4 | [Archivos, fotos y capturas](curso-de-claude/04-archivos-fotos-y-capturas/) | — |
 | 5 | [Qué son los conectores](curso-de-claude/05-que-son-los-conectores/) | — |
+| 6 | [Conecta tu Gmail](curso-de-claude/06-conecta-tu-gmail/) | — |
 
 ### Claude en tu día a día
 
