@@ -23,6 +23,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 4 | [Archivos, fotos y capturas](curso-de-claude/04-archivos-fotos-y-capturas/) | — |
 | 5 | [Qué son los conectores](curso-de-claude/05-que-son-los-conectores/) | — |
 | 6 | [Conecta tu Gmail](curso-de-claude/06-conecta-tu-gmail/) | — |
+| 7 | [Tu calendario y tu Google Drive](curso-de-claude/07-calendario-y-google-drive/) | — |
 
 ### Claude en tu día a día
 
