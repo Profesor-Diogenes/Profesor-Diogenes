@@ -31,6 +31,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 
 | Nº | Capítulo | Código |
 |----|----------|--------|
+| 1 | [Claude desde el móvil sin gastar de más](claude-en-tu-dia-a-dia/01-claude-desde-el-movil/) | — |
 
 Se irán añadiendo capítulos.
 
