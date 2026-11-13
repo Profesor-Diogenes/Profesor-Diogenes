@@ -32,6 +32,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | Nº | Capítulo | Código |
 |----|----------|--------|
 | 1 | [Claude desde el móvil sin gastar de más](claude-en-tu-dia-a-dia/01-claude-desde-el-movil/) | — |
+| 2 | [Conectar Claude a tu banco en solo lectura](claude-en-tu-dia-a-dia/02-banco-en-solo-lectura/) | ✅ Python |
 
 Se irán añadiendo capítulos.
 
