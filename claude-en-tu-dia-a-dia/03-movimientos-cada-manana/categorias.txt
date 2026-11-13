@@ -1,0 +1,10 @@
+# Tu lista de categorías. Formato:  categoría: PALABRA, PALABRA, ...
+# Si el concepto del movimiento contiene una de las palabras, va a esa categoría.
+# Lo que no encaje en ninguna va a "otros". No hay más categorías que las de aquí.
+# "traspasos" es especial: se queda FUERA de las sumas de gastos e ingresos.
+supermercado: SUPER, MERCADO, FRUTERIA
+luz y agua: LUZ, AGUAS
+transporte: BUS, GASOLINERA, METRO
+suscripciones: SERIES, MUSICA, GIMNASIO
+traspasos: TRASPASO
+ingresos: NOMINA
