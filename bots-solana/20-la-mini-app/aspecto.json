@@ -1,0 +1,27 @@
+{
+ "titulo": "Mi bot de Solana",
+ "lema": "Mirar antes de entrar.",
+ "foto": "",
+ "foto_grande": "",
+ "colores": {
+  "fondo": "#14110d",
+  "tarjeta": "#221c15",
+  "texto": "#e9dfcc",
+  "apagado": "#9a8f7c",
+  "principal": "#e7b24a",
+  "sube": "#6fcf7a",
+  "baja": "#e2675a"
+ },
+ "pestanas": [
+  "analizar",
+  "libreta",
+  "papel"
+ ],
+ "pestanas_abajo": false,
+ "nombres": {
+  "analizar": "Analizar",
+  "libreta": "Libreta",
+  "papel": "Papel"
+ },
+ "pie": "Esto no te dice qué comprar. Te enseña lo que hay. La decisión es tuya."
+}

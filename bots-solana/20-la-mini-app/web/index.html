@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mini app</title>
+<!-- Esto lo pone Telegram: con ello la página sabe que está dentro de Telegram y quién la abre -->
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  /* Los colores vienen de aspecto.json. Estos son solo por si no carga. */
+  :root { --fondo:#14110d; --tarjeta:#221c15; --texto:#e9dfcc; --apagado:#9a8f7c; --principal:#e7b24a; --sube:#6fcf7a; --baja:#e2675a; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:16px 14px 40px; background:var(--fondo); color:var(--texto);
+         font:16px/1.4 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+  header img { width:68px; height:68px; border-radius:50%; object-fit:cover; border:2px solid var(--principal); }
+  h1 { margin:0; font-size:26px; color:var(--principal); }
+  .lema { margin:2px 0 0; color:var(--apagado); font-style:italic; font-size:14px; }
+  .tarjeta { background:var(--tarjeta); border-radius:14px; padding:14px; margin-bottom:14px; }
+  .rotulo { font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--apagado); margin-bottom:8px; }
+  input { width:100%; padding:13px; border-radius:10px; border:1px solid color-mix(in srgb, var(--texto) 22%, transparent); background:color-mix(in srgb, var(--texto) 5%, transparent); color:var(--texto);
+          font:15px ui-monospace, Menlo, monospace; }
+  .botones { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:10px; }
+  button { padding:12px 8px; border-radius:10px; border:1px solid color-mix(in srgb, var(--texto) 20%, transparent); background:color-mix(in srgb, var(--texto) 6%, transparent); color:var(--texto); font-size:15px; }
+  button:active { transform:scale(.98); }
+  button[disabled] { opacity:.4; }
+  .pestanas { display:flex; gap:8px; margin-bottom:14px; }
+  .pestanas button { flex:1; }
+  .pestanas button.puesta { border-color:var(--principal); color:var(--principal); }
+  pre { white-space:pre-wrap; word-break:break-word; margin:0; font:13px/1.45 ui-monospace, Menlo, monospace; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td, th { padding:8px 4px; text-align:right; border-bottom:1px solid color-mix(in srgb, var(--texto) 10%, transparent); }
+  td:first-child, th:first-child { text-align:left; }
+  th { color:var(--apagado); font-weight:500; font-size:12px; }
+  .sube { color:var(--sube); } .baja { color:var(--baja); } .gris { color:var(--apagado); }
+  .cifras { display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; text-align:center; }
+  .cifras b { display:block; font-size:22px; }
+  .cifras span { font-size:12px; color:var(--apagado); }
+  .pie { text-align:center; color:var(--apagado); font-size:13px; margin-top:20px; }
+  /* foto grande a todo lo ancho (aspecto.json: "foto_grande") */
+  #cabecera { display:block; width:calc(100% + 28px); margin:-16px -14px 14px; max-height:230px; object-fit:cover;
+              -webkit-mask-image:linear-gradient(#000 70%, transparent); mask-image:linear-gradient(#000 70%, transparent); }
+  /* pestañas abajo, como en una aplicación del móvil (aspecto.json: "pestanas_abajo") */
+  body.abajo { padding-bottom:96px; }
+  body.abajo .pestanas { position:fixed; left:0; right:0; bottom:0; margin:0; padding:10px 14px 18px; background:var(--fondo);
+                         border-top:1px solid color-mix(in srgb, var(--texto) 14%, transparent); z-index:5; }
+  .oculto, #cabecera.oculto { display:none; }
+</style>
+</head>
+<body>
+<img id="cabecera" class="oculto" alt="">
+<header>
+  <img id="foto" class="oculto" alt="">
+  <div><h1 id="titulo">Mini app</h1><p class="lema" id="lema"></p></div>
+</header>
+
+<div class="pestanas" id="pestanas"></div>
+
+<!-- PESTAÑA ANALIZAR -->
+<section id="p-analizar" class="oculto">
+  <div class="tarjeta">
+    <div class="rotulo">Pega el contrato o la billetera</div>
+    <input id="direccion" placeholder="Dirección de Solana" autocomplete="off" autocapitalize="off" spellcheck="false">
+    <div class="botones" id="botones"></div>
+  </div>
+  <div class="tarjeta oculto" id="respuesta"><div class="rotulo" id="respuesta-rotulo"></div><pre id="respuesta-texto"></pre></div>
+</section>
+
+<!-- PESTAÑA LIBRETA -->
+<section id="p-libreta" class="oculto">
+  <div class="tarjeta"><div class="rotulo" id="libreta-rotulo">Libreta</div><div id="libreta"></div></div>
+</section>
+
+<!-- PESTAÑA PAPEL -->
+<section id="p-papel" class="oculto">
+  <div class="tarjeta"><div class="rotulo">Balance en papel</div><div class="cifras" id="papel-cifras"></div></div>
+  <div class="tarjeta"><div class="rotulo">Abiertas</div><div id="papel-abiertas"></div></div>
+  <div class="tarjeta"><div class="rotulo">Cerradas</div><div id="papel-cerradas"></div></div>
+</section>
+
+<p class="pie" id="pie"></p>
+
+<script>
+const tg = window.Telegram ? Telegram.WebApp : null;
+if (tg) { tg.ready(); tg.expand(); }
+const el = id => document.getElementById(id);
+const limpio = t => String(t).replace(/[&<>]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+
+// Todas las preguntas al programa llevan la firma de Telegram: sin ella no contesta.
+async function preguntar(ruta, datos) {
+  const r = await fetch(ruta, { method:"POST", headers:{ "Content-Type":"application/json", "X-Telegram": tg ? tg.initData : "" },
+                                body: JSON.stringify(datos || {}) });
+  return r.json();
+}
+function dinero(x) {
+  if (x == null) return "—";
+  if (x >= 1e6) return (x/1e6).toFixed(1) + " M$";
+  if (x >= 1e3) return (x/1e3).toFixed(1) + " K$";
+  return Math.round(x) + " $";
+}
+function veces(antes, ahora) {
+  if (!antes || ahora == null) return '<span class="gris">—</span>';
+  const x = ahora / antes;
+  return '<span class="' + (x >= 1 ? "sube" : "baja") + '">x' + x.toFixed(2) + '</span>';
+}
+
+// ── pestañas ──
+const cargar = { libreta: verLibreta, papel: verPapel };
+function ir(nombre) {
+  document.querySelectorAll("section").forEach(s => s.classList.add("oculto"));
+  document.querySelectorAll("#pestanas button").forEach(b => b.classList.toggle("puesta", b.dataset.p === nombre));
+  el("p-" + nombre).classList.remove("oculto");
+  if (cargar[nombre]) cargar[nombre]();
+}
+
+// ── analizar ──
+async function mirar(clave, nombre) {
+  const direccion = el("direccion").value.trim();
+  if (!direccion) { el("direccion").focus(); return; }
+  document.querySelectorAll("#botones button").forEach(b => b.disabled = true);
+  el("respuesta").classList.remove("oculto");
+  el("respuesta-rotulo").textContent = nombre;
+  el("respuesta-texto").textContent = "Mirando… dame un momento.";
+  try {
+    const r = await preguntar("/api/mirar", { que: clave, direccion });
+    el("respuesta-texto").textContent = r.texto || r.error || "Sin respuesta.";
+  } catch (e) { el("respuesta-texto").textContent = "No he podido preguntar. ¿Sigue el programa en marcha?"; }
+  document.querySelectorAll("#botones button").forEach(b => b.disabled = false);
+}
+
+// ── libreta ──
+async function verLibreta() {
+  el("libreta").innerHTML = '<span class="gris">Cargando…</span>';
+  const r = await preguntar("/api/libreta");
+  if (r.error || r.aviso) { el("libreta").innerHTML = '<span class="gris">' + limpio(r.error || r.aviso) + '</span>'; return; }
+  el("libreta-rotulo").textContent = "Libreta · " + r.total + " contratos";
+  el("libreta").innerHTML = "<table><tr><th>Token</th><th>Al apuntarlo</th><th>Ahora</th><th></th></tr>" +
+    r.filas.map(f => "<tr><td>" + limpio(f.simbolo) + "</td><td>" + dinero(f.antes) + "</td><td>" + dinero(f.ahora) +
+                     "</td><td>" + veces(f.antes, f.ahora) + "</td></tr>").join("") + "</table>";
+}
+
+// ── papel ──
+async function verPapel() {
+  const r = await preguntar("/api/papel");
+  if (r.error || r.aviso) { el("papel-cifras").innerHTML = '<span class="gris">' + limpio(r.error || r.aviso) + '</span>'; return; }
+  const n = r.cerradas.length, signo = r.resultado >= 0 ? "sube" : "baja";
+  el("papel-cifras").innerHTML =
+    "<div><b>" + n + "</b><span>cerradas</span></div>" +
+    "<div><b>" + (n ? Math.round(100 * r.ganadas / n) + " %" : "—") + "</b><span>acierto</span></div>" +
+    '<div><b class="' + signo + '">' + (r.resultado >= 0 ? "+" : "") + r.resultado.toFixed(3) + "</b><span>SOL</span></div>";
+  el("papel-abiertas").innerHTML = r.abiertas.length ? "<table>" + r.abiertas.map(o =>
+    "<tr><td>" + limpio(o.simbolo) + "</td><td>" + o.sol + " SOL</td><td class='gris'>" + limpio(o.hora) + "</td></tr>").join("") + "</table>"
+    : '<span class="gris">Ninguna.</span>';
+  el("papel-cerradas").innerHTML = n ? "<table>" + r.cerradas.map(o =>
+    "<tr><td>" + limpio(o.simbolo) + "</td><td class='gris'>" + limpio(o.motivo || "") + "</td><td class='" + (o.x >= 1 ? "sube" : "baja") + "'>x" +
+    (o.x || 0).toFixed(2) + "</td></tr>").join("") + "</table>" : '<span class="gris">Ninguna todavía.</span>';
+}
+
+// ── arranque: leer el aspecto y pintar ──
+(async function () {
+  const a = await (await fetch("/aspecto")).json();
+  for (const [nombre, color] of Object.entries(a.colores || {})) document.documentElement.style.setProperty("--" + nombre, color);
+  if (tg && a.colores) { try { tg.setHeaderColor(a.colores.fondo); tg.setBackgroundColor(a.colores.fondo); } catch (e) {} }
+  el("titulo").textContent = a.titulo; el("lema").textContent = a.lema || ""; el("pie").textContent = a.pie || "";
+  document.title = a.titulo;
+  if (a.foto) { el("foto").src = "/web/" + a.foto; el("foto").classList.remove("oculto"); }
+  if (a.foto_grande) { el("cabecera").src = "/web/" + a.foto_grande; el("cabecera").classList.remove("oculto"); }
+  if (a.pestanas_abajo) document.body.classList.add("abajo");
+  a.pestanas.forEach(p => {
+    const b = document.createElement("button"); b.textContent = (a.nombres || {})[p] || p; b.dataset.p = p; b.onclick = () => ir(p);
+    el("pestanas").appendChild(b);
+  });
+  a.botones.forEach(x => {
+    const b = document.createElement("button"); b.textContent = x.nombre; b.onclick = () => mirar(x.clave, x.nombre);
+    el("botones").appendChild(b);
+  });
+  ir(a.pestanas[0]);
+})();
+</script>
+</body>
+</html>

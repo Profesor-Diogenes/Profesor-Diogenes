@@ -6,10 +6,11 @@ Diógenes es un viejo filósofo que vive en un barril y explica las cosas sin ad
 
 Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude y, cuando el capítulo construye algo, el código listo para usarlo **en tu propio ordenador** (Windows, Mac o Linux, con Python 3.10 o más nuevo).
 
-## Las dos series
+## Las series
 
 - **Curso de Claude** (los miércoles): desde cero, paso a paso.
 - **Claude en tu día a día** (los viernes): cosas concretas que te ahorran tiempo.
+- **[Bots de Solana](bots-solana/)**: un bot de Telegram por función para mirar memecoins de Solana gratis, con los datos medidos al lado.
 
 ## Índice
 
@@ -36,6 +37,35 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 3 | [Que Claude te lea los movimientos cada mañana](claude-en-tu-dia-a-dia/03-movimientos-cada-manana/) | ✅ Python |
 
 Se irán añadiendo capítulos.
+
+### Bots de Solana
+
+▶️ [La serie en orden](https://www.youtube.com/playlist?list=PLbRgpdRexHjI) · 📊 [Los datos](https://github.com/Profesor-Diogenes/Profesor-Diogenes/tree/datos)
+
+| Nº | Capítulo | Código |
+|----|----------|--------|
+| 1 | [Analiza cualquier memecoin de Solana gratis, con tu propio bot](bots-solana/01-analizar-contrato-gmgn/) | ✅ Python |
+| 2 | [Mira un contrato de Solana por dentro, sin fiarte de nadie](bots-solana/02-contrato-por-dentro-nodo/) | ✅ Python |
+| 3 | [Analiza una billetera: quién es, cómo juega y de dónde le viene el dinero](bots-solana/03-analizar-billetera/) | ✅ Python |
+| 4 | [Vigila una billetera de Solana y que tu bot te avise cuando compre](bots-solana/04-seguir-billetera-en-directo/) | ✅ Python |
+| 5 | [Escucha en directo los tokens que nacen en Solana](bots-solana/05-tokens-que-nacen/) | ✅ Python |
+| 6 | [Lee los grupos de llamadas de Telegram con un bot (y lo que valen)](bots-solana/06-leer-grupos-de-telegram/) | ✅ Python |
+| 7 | [La radiografía de los holders: cuánta gente hay de verdad en un token](bots-solana/07-radiografia-de-holders/) | ✅ Python |
+| 8 | [Sigue el dinero del creador de un token de Solana](bots-solana/08-el-dev-en-la-cadena/) | ✅ Python |
+| 9 | [Las señales de GMGN en tu móvil, y lo que pasó al medirlas](bots-solana/09-senales-de-gmgn/) | ✅ Python |
+| 10 | [Seguridad de un token de Solana, comprobada en la cadena](bots-solana/10-seguridad-en-la-cadena/) | ✅ Python |
+| 11 | [Cuando varias billeteras que sigues compran el mismo token](bots-solana/11-varias-billeteras-compran-lo-mismo/) | ✅ Python |
+| 12 | [Quién nombra qué token en X: un bot que te avisa, sin cuenta y gratis](bots-solana/12-contratos-en-x/) | ✅ Python |
+| 13 | [Ventas gordas en directo: que tu bot te avise cuando sueltan](bots-solana/13-ventas-gordas-en-directo/) | ✅ Python |
+| 14 | [Tu propia criba de tokens de Solana, cada pocos minutos](bots-solana/14-tu-propia-criba/) | ✅ Python |
+| 15 | [La libreta: el bot que apunta todo lo que pasa](bots-solana/15-guardar-todo/) | ✅ Python |
+| 16 | [Medir sin engañarte: el vídeo más importante de la serie](bots-solana/16-medir-sin-trampa/) | ✅ Python |
+| 17 | [Un bot que compra y vende memes de mentira, con las cuentas de verdad](bots-solana/17-bot-en-papel/) | ✅ Python |
+| 18 | [Le doy los datos a la IA y que me diga qué token va a subir](bots-solana/18-bot-con-ia/) | ✅ Python |
+| 19 | [El bot definitivo de Solana: todas las piezas en un solo bot](bots-solana/19-el-bot-definitivo/) | ✅ Python |
+| 20 | [Convierte tu bot en una aplicación dentro de Telegram](bots-solana/20-la-mini-app/) | ✅ Python |
+| 21 | Las plataformas de pago de Solana: qué dan, cuánto cuestan y qué no | — (no lleva código) |
+| 22 | [Quién pagó a quién: sigue el dinero de una billetera hacia atrás](bots-solana/22-quien-pago-a-quien/) | ✅ Python |
 
 ## Cómo usar el código (para no programadores)
 

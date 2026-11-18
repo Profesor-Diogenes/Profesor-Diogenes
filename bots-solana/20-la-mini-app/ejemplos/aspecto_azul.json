@@ -1,0 +1,11 @@
+{
+ "titulo": "El barril",
+ "lema": "No vendo nada. Miro.",
+ "foto": "",
+ "foto_grande": "",
+ "colores": {"fondo": "#0c1626", "tarjeta": "#15233a", "texto": "#dfe8f5", "apagado": "#8496b0", "principal": "#5ad1a4", "sube": "#5ad1a4", "baja": "#f0707a"},
+ "pestanas": ["papel", "libreta", "analizar"],
+ "pestanas_abajo": false,
+ "nombres": {"analizar": "Analizar", "libreta": "Mi libreta", "papel": "En papel"},
+ "pie": "Esto no te dice qué comprar. Te enseña lo que hay. La decisión es tuya."
+}

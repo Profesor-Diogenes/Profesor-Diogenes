@@ -1,0 +1,4 @@
+requests>=2.31
+curl_cffi>=0.7
+websockets>=12
+base58>=2.1
