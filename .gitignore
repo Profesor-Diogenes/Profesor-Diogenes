@@ -32,3 +32,12 @@ Thumbs.db
 .vscode/
 .idea/
 *.swp
+
+# Bots de Solana: lo que cada bot va apuntando mientras lo usas (es tuyo, no va al repo)
+bots-solana/**/*.csv
+bots-solana/**/*.log
+bots-solana/**/ajustes.json
+bots-solana/**/escuchando.json
+bots-solana/**/reglas.json
+bots-solana/**/papel.json
+bots-solana/**/definitivo.json
