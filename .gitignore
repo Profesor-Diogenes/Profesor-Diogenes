@@ -41,3 +41,14 @@ bots-solana/**/escuchando.json
 bots-solana/**/reglas.json
 bots-solana/**/papel.json
 bots-solana/**/definitivo.json
+# ...menos las tablas de los vídeos 24 a 28, que son parte del capítulo
+!bots-solana/24-probar-una-regla/fichas.csv
+!bots-solana/26-entrenar-un-modelo/tabla.csv
+!bots-solana/27-por-que-el-modelo-se-engana/tabla.csv
+!bots-solana/27-por-que-el-modelo-se-engana/tabla_trampa.csv
+!bots-solana/28-el-modelo-en-el-bot/tabla.csv
+bots-solana/**/apuntes.jsonl
+bots-solana/**/medidas.json
+bots-solana/**/modelo.txt
+bots-solana/**/modelo.txt.json
+bots-solana/**/datos/
