@@ -28,6 +28,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 8 | [Cualquier aplicación del catálogo](curso-de-claude/08-catalogo-de-conectores/) | — |
 | 9 | [Conectores personalizados](curso-de-claude/09-conectores-personalizados/) | — |
 | 10 | [Por qué se te acaba el plan](curso-de-claude/10-por-que-se-acaba-el-plan/) | — |
+| 11 | [Los trucos oficiales de Anthropic para gastar menos](curso-de-claude/11-trucos-oficiales-para-gastar-menos/) | — |
 
 ### Claude en tu día a día
 
