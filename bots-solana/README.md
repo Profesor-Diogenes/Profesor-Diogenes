@@ -34,10 +34,18 @@ Un vídeo por función. Cada carpeta es un bot de Telegram que puedes montar **e
 | 20 | [Convierte tu bot en una aplicación dentro de Telegram](20-la-mini-app/) | ✅ Python |
 | 21 | Las plataformas de pago de Solana: qué dan, cuánto cuestan y qué no | — (no lleva código) |
 | 22 | [Quién pagó a quién: sigue el dinero de una billetera hacia atrás](22-quien-pago-a-quien/) | ✅ Python |
+| 23 | [El mapa de billeteras de un token: quién pagó a quién, en una imagen](23-el-grafo-de-billeteras/) | ✅ Python |
+| 24 | [Prueba tu regla contra el pasado antes de fiarte de ella](24-probar-una-regla/) | ✅ Python |
+| 25 | [Prepara los datos antes de entrenar: una fila por token y ninguna trampa](25-preparar-la-tabla/) | ✅ Python |
+| 26 | [Entrena un modelo y compáralo con una moneda al aire](26-entrenar-un-modelo/) | ✅ Python |
+| 27 | [Por qué tu modelo acierta el 100 % y aun así te engaña](27-por-que-el-modelo-se-engana/) | ✅ Python |
+| 28 | [El modelo dentro del bot, en directo: lo que pasó de verdad](28-el-modelo-en-el-bot/) | ✅ Python |
 
 ## Los datos
 
 Todo lo que se dice en los vídeos sale de datos medidos. Están publicados para que los compruebes tú, con tu IA o a mano: [rama «datos» de este mismo repositorio](https://github.com/Profesor-Diogenes/Profesor-Diogenes/tree/datos). Allí hay un LEEME que explica cada fichero, cada columna y cómo se mide el resultado sin hacer trampa con el futuro.
+
+Y todos los contratos y billeteras que hemos analizado estos meses (unos 170 GB comprimidos, con la explicación de cada tabla) están en Hugging Face: [Diogenesprofesor/memecoins-solana](https://huggingface.co/datasets/Diogenesprofesor/memecoins-solana).
 
 ## Para qué sirve todo esto (y para qué no)
 
