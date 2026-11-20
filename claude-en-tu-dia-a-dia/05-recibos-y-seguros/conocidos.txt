@@ -1,0 +1,3 @@
+# Recibos que SÍ reconoces y no son seguros (luz, agua, gimnasio...), una palabra por línea.
+# Lo que no esté aquí ni en palabras.txt te sale como "recibo que no reconoces".
+GIMNASIO EJEMPLO

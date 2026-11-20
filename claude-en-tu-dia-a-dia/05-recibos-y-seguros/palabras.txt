@@ -1,0 +1,9 @@
+# Lo que busca el programa en el concepto de cada movimiento (una cosa por línea).
+# La lista la pones TÚ: tú sabes con quién tienes póliza. Da igual mayúsculas y tildes.
+SEGURO
+DEVOLUCION
+ANULACION
+# El nombre de tus aseguradoras, tal y como sale en el banco:
+ASEG. EJEMPLO A
+ASEG. EJEMPLO B
+ASEG. EJEMPLO D

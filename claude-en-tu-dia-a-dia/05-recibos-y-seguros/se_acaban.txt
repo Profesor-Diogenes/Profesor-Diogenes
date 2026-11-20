@@ -1,0 +1,3 @@
+# Los recibos que se acaban solos (un pago y ya está). Todo lo demás se da por renovable.
+# Pon una palabra que salga en el concepto, una por línea.
+VIAJE
