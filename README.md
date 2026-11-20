@@ -41,6 +41,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 3 | [Que Claude te lea los movimientos cada mañana](claude-en-tu-dia-a-dia/03-movimientos-cada-manana/) | ✅ Python |
 | 4 | [Sobres y metas que tu banco no tiene](claude-en-tu-dia-a-dia/04-sobres-y-metas/) | ✅ Python |
 | 5 | [Que Claude encuentre todos tus recibos y seguros](claude-en-tu-dia-a-dia/05-recibos-y-seguros/) | ✅ Python |
+| 6 | [Nóminas, facturas y compras cruzadas con tu banco](claude-en-tu-dia-a-dia/06-nominas-facturas-y-compras/) | ✅ Python |
 
 Se irán añadiendo capítulos.
 
