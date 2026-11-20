@@ -1,0 +1,16 @@
+# TUS reglas de reparto. Las decides TÚ; el programa (y Claude) solo las aplica.
+#
+# Formato:   PALABRAS DEL CONCEPTO = sobre
+#            PALABRAS DEL CONCEPTO = sobre1 50, sobre2 resto   (50 € fijos a uno y el resto al otro)
+# Si al final pones  | cada mes  y un mes entero no entra nada de esa regla, te avisa.
+# Se mira de arriba abajo y gana la primera que encaje (da igual mayúsculas y tildes).
+# La línea  * = sobre  dice adónde va cualquier otro movimiento.
+
+# El redondeo de cada compra, entero a oportunidades
+REDONDEO = oportunidades | cada mes
+# Del ahorro automático de cada mes, 50 se quedan en la hucha y el resto va de paso hacia la inversión
+AHORRO AUTOMATICO = hucha_navidad 50, hacia_inversion resto | cada mes
+# Cuando el dinero sale hacia la inversión, sale de ese sobre
+TRASPASO A INVERSION = hacia_inversion
+# Cualquier otro ingreso, a la hucha
+* = hucha_navidad
