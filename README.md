@@ -32,6 +32,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 12 | [Trucos de Claude Code y del servidor para que el plan dure](curso-de-claude/12-claude-code-y-servidor-que-el-plan-dure/) | — |
 | 13 | [Tu modelo de visión mira la foto y ahorras plan](curso-de-claude/13-modelo-de-vision-en-casa/) | — |
 | 14 | [Qué es un servidor y por qué lo necesitas con Claude](curso-de-claude/14-que-es-un-servidor/) | — |
+| 15 | [Prepara tu servidor y entra seguro](curso-de-claude/15-prepara-tu-servidor-y-entra-seguro/) | — |
 
 ### Claude en tu día a día
 
