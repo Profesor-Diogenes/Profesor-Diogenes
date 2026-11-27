@@ -1,0 +1,9 @@
+# Frases de EJEMPLO para probar el filtro a mano: python comentarios.py filtro
+# Las cuatro primeras tienen que salir FUERA. Añade las tuyas.
+Gran post, me ha encantado leerlo de principio a fin
+No es solo una receta, es una forma de vida
+Rápido, barato y sano: lo tiene todo
+Esto va directo a la luna 🚀
+Sin lugar a dudas, el truco del horno funciona
+Yo lo hago igual pero con la mitad de sal — queda mejor
+¿Y con harina de avena también sale así de esponjoso?

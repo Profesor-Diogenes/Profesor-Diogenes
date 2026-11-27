@@ -1,0 +1,17 @@
+[
+ {"id": "ig1", "cuenta": "cuenta_ejemplo_3", "red": "instagram", "fecha": "2026-11-08T10:00",
+  "enlace": "https://example.com/ejemplo/ig1",
+  "texto": "Bizcocho de yogur sin horno, en la freidora de aire. 20 minutos a 160 grados y sale esponjoso."},
+ {"id": "ig2", "cuenta": "cuenta_ejemplo_7", "red": "instagram", "fecha": "2026-11-03T10:00",
+  "enlace": "https://example.com/ejemplo/ig2",
+  "texto": "Mi pan de los domingos: masa madre, 24 horas de nevera y mucha paciencia."},
+ {"id": "ig3", "cuenta": "cuenta_ejemplo_9", "red": "instagram", "fecha": "2026-10-10T10:00", "fijado": true,
+  "enlace": "https://example.com/ejemplo/ig3",
+  "texto": "Bienvenidos a mi cocina. Aquí recetas fáciles para diario."},
+ {"id": "x1", "cuenta": "ejemplo_x_2", "red": "x", "fecha": "2026-11-08T18:00",
+  "enlace": "https://example.com/ejemplo/x1",
+  "texto": "Truco: si la tortilla se pega, sartén bien caliente antes de echar el huevo."},
+ {"id": "x2", "cuenta": "ejemplo_x_5", "red": "x", "fecha": "2026-11-06T09:00",
+  "enlace": "https://example.com/ejemplo/x2",
+  "texto": "¿Lentejas con o sin chorizo? Debate abierto."}
+]

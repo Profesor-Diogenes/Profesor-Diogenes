@@ -47,6 +47,7 @@ Aquí tienes, capítulo a capítulo, las frases exactas para pedírselo a Claude
 | 5 | [Que Claude encuentre todos tus recibos y seguros](claude-en-tu-dia-a-dia/05-recibos-y-seguros/) | ✅ Python |
 | 6 | [Nóminas, facturas y compras cruzadas con tu banco](claude-en-tu-dia-a-dia/06-nominas-facturas-y-compras/) | ✅ Python |
 | 7 | [Publicar un vídeo en todas tus redes a la vez](claude-en-tu-dia-a-dia/07-publicar-en-todas-tus-redes/) | ✅ Python |
+| 8 | [Comentarios con Claude que solo salen si tú das el OK](claude-en-tu-dia-a-dia/08-comentarios-con-tu-ok/) | ✅ Python |
 
 Se irán añadiendo capítulos.
 

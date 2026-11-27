@@ -1,0 +1,27 @@
+# Las cuentas que quieres comentar: de TU tema y de TU idioma. Las eliges tú.
+# Una por línea, debajo de su red. Cada día se cogen 5 de cada (van rotando).
+# Estas son de EJEMPLO, inventadas: cámbialas por las tuyas.
+
+[instagram]
+cuenta_ejemplo_1
+cuenta_ejemplo_2
+cuenta_ejemplo_3
+cuenta_ejemplo_4
+cuenta_ejemplo_5
+cuenta_ejemplo_6
+cuenta_ejemplo_7
+cuenta_ejemplo_8
+cuenta_ejemplo_9
+cuenta_ejemplo_10
+
+[x]
+ejemplo_x_1
+ejemplo_x_2
+ejemplo_x_3
+ejemplo_x_4
+ejemplo_x_5
+ejemplo_x_6
+ejemplo_x_7
+ejemplo_x_8
+ejemplo_x_9
+ejemplo_x_10
