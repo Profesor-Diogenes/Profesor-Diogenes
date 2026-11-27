@@ -1,0 +1,8 @@
+# La llave del túnel y lo que genera la web al funcionar: no se sube
+credenciales.json
+*.pem
+logs/*.log
+logs/*.pid
+capturas/
+config.yml.bak_*
+temp/*/

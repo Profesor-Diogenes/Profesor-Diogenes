@@ -1,0 +1,13 @@
+# Archivo de reglas del túnel (EJEMPLO, con dominios example.com que no son de nadie).
+# Gana la PRIMERA regla que encaja: las concretas arriba, la general abajo, y al final un 404 para todo lo demás.
+# Antes de cambiarlo, haz una copia con fecha (mira el README).
+tunnel: tunel-ejemplo                      # el nombre que le diste con "cloudflared tunnel create"
+credentials-file: ./credenciales.json      # el .json que te dio "tunnel create". Es una llave: NO se comparte
+ingress:
+  - hostname: web.example.com              # concreta: arriba
+    service: http://127.0.0.1:8099
+  - hostname: blog.example.com             # ejemplo de regla que apunta a un puerto donde no escucha nadie
+    service: http://127.0.0.1:8098
+  - hostname: "*.example.com"              # general: abajo
+    service: http://127.0.0.1:8099
+  - service: http_status:404               # todo lo demás: no encontrado

@@ -1,0 +1,1 @@
+Aquí guarda nginx sus archivos temporales. Esta carpeta tiene que existir.
