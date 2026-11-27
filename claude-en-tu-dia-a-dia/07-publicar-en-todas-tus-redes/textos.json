@@ -1,0 +1,18 @@
+{
+  "receta_tortilla.mp4": {
+    "youtube": "Tortilla en 10 minutos. Receta completa: https://ejemplo.com/tortilla",
+    "instagram": "Tortilla en 10 minutos. Enlace en el perfil.",
+    "tiktok": "Tortilla en 10 minutos. Enlace en el perfil.",
+    "x": "Tortilla en 10 minutos, sin trampas."
+  },
+  "truco_cafe.mp4": {
+    "youtube": "El truco del café que no amarga",
+    "instagram": "El truco del café que no amarga. Enlace en el perfil.",
+    "tiktok": "El truco del café que no amarga.",
+    "x": "El café no tiene por qué amargar."
+  },
+  "paseo_otono.mp4": {
+    "youtube": "Un paseo de otoño en un minuto",
+    "tiktok": "Un paseo de otoño en un minuto."
+  }
+}
